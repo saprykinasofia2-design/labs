@@ -1,0 +1,184 @@
+\documentclass[aspectratio=169, 11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, decorations.pathmorphing}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{fontawesome5} 
+\usepackage{helvet}
+\usepackage{textcomp} 
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{newunicodechar}
+\newunicodechar{₽}{\text{\textcurrency}}
+
+
+\definecolor{softPink}{RGB}{255,240,245}
+\definecolor{softMint}{RGB}{230,245,240}
+\definecolor{softLavender}{RGB}{240,235,255}
+\definecolor{softPeach}{RGB}{255,245,235}
+\definecolor{mainPastel}{RGB}{180,200,210}
+\definecolor{darkAccent}{RGB}{100,120,130}
+
+\setbeamercolor{background canvas}{bg=softPink}
+\setbeamercolor{frametitle}{fg=darkAccent, bg=softMint}
+\setbeamercolor{title}{fg=darkAccent}
+\setbeamercolor{structure}{fg=darkAccent}
+\setbeamercolor{block title}{bg=softLavender, fg=darkAccent}
+\setbeamercolor{block body}{bg=white, fg=darkAccent}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+
+\title{История Физико-математического факультета ОГУ}
+\author{Сапрыкина С.В.}
+\date{22 апреля 2026}
+
+\setbeamersize{text margin left=0.8cm, text margin right=0.8cm}
+\begin{document}
+
+% ===== 1 слайд титульник =====
+\begin{frame}
+\titlepage
+\centering
+\includegraphics[width=0.2\textwidth]{logo.jpg} 
+\end{frame}
+
+% ===== 2 слайд =====
+\begin{frame}{О факультете}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\begin{center}
+\includegraphics[width=1\textwidth]{old.jpg} 
+\end{center}
+\column{0.5\textwidth}
+\begin{block}{\centering Один из старейших}
+Создан в 1931 году как физико-технический факультет индустриально-педагогического института.
+\end{block}
+\vfill
+\begin{alertblock}{\centering Фундаментальность + IT}
+Сочетает классическую физику, математику и современные информационные технологии.
+\end{alertblock}
+\end{columns}
+\end{frame}
+
+% ===== 3 слайд =====
+\begin{frame}{Исторические события }
+\centering
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+    timeline/.style={-{Stealth}, thick, darkAccent},
+    nodeUp/.style={rectangle, draw=darkAccent, rounded corners, fill=softMint, text width=2.5cm, align=center, font=\small, below=0.1cm},
+    nodeDown/.style={rectangle, draw=darkAccent, rounded corners, fill=softLavender, text width=2.5cm, align=center, font=\small, above=0.1cm}
+]
+
+\draw[timeline] (0,0) -- (11,0);
+\foreach \x in {0, 2.75, 5.5, 8.25, 11} 
+    \draw (\x,0.1) -- (\x,-0.1);
+
+\node[nodeUp] at (0, -0.7) {1931\\Основание института};
+\node[nodeDown] at (2.75, 0.7) {1932\\Переименован в физмат};
+\node[nodeUp] at (5.5, -0.7) {1950–1980-е\\Вечерние отделения и кафедры};
+\node[nodeDown] at (8.25, 0.7) {1990-е\\Компьютериза\\ция, IT};
+\node[nodeUp] at (11, -0.7) {2001\\Обсерватория Meade};
+
+\end{tikzpicture}%
+}
+\end{frame}
+
+% ===== 4 слайд =====
+\begin{frame}{Развитие факультета}
+\begin{columns}
+\column{0.6\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{jadin.jpg} 
+\smallskip
+
+\column{0.5\textwidth}
+\begin{itemize}
+\item \textbf{1950–1980-е:} активное развитие кафедр общей и теоретической физики 
+\item \textbf{Жадин} успешно занимался с Ростовцевым, который во второй половине 1950-х годов, защитил кандидатскую диссертацию по физике.
+\item \textbf{Сегодня} на базе факультета регулярно проводятся крупные научные
+
+мероприятия 
+\end{itemize}
+\end{columns}
+\vfill
+\begin{center}
+\fcolorbox{darkAccent}{softMint}{Адрес: г. Орёл, ул. Комсомольская, д. 95 (корпус №1)}
+\end{center}
+\end{frame}
+
+% ===== 5 слайд =====
+\begin{frame}{Цифры и карьера}
+\begin{columns}[T]
+
+\column{0.5\textwidth}
+\begin{block}{\centering Поступление 2025}
+\centering
+\large \textbf{94} бюджетных места\\
+\textbf{от 128 240} ₽ в год
+\end{block}
+\vspace{0.15cm}
+\centering
+\includegraphics[width=0.85\columnwidth]{now.jpg} 
+
+\column{0.5\textwidth}
+\begin{block}{\centering Востребованные IT-профессии}
+\begin{itemize}
+\item Руководитель IT-проектов
+\item Разработчик приложений
+\item Инженер прикладной сферы
+\end{itemize}
+\end{block}
+\vspace{0.15cm}
+\centering
+\includegraphics[width=0.80\columnwidth]{kab.jpg} 
+
+\end{columns}
+\end{frame}
+
+% ===== 6 слайд =====
+\begin{frame}{Кафедры физико-математического факультета}
+\rowcolors{2}{softMint}{softLavender}
+\centering
+\begin{tabular}{|p{0.35\textwidth} |p{0.35\textwidth} |p{0.25\textwidth}|}\hline
+
+\rowcolor{mainPastel}\textbf{Кафедра} & \textbf{Заведующий} & \textbf{Код}\\\hline
+
+Математического анализа и методики & Чаплыгина Е.В. & 01.03.01\\\hline
+Алгебры и математических методов & Строев С.П. & 01.04.01\\\hline
+Экспериментальной и теоретической физики & Марков О.И. & 03.03.02\\\hline
+Информатики & Дорофеева В.И. &  09.03.03, 09.04.03\\\hline
+Математики и прикладных информационных технологий & Авдеев И.Ф. & 01.03.02, 01.04.02\\ \hline
+
+\end{tabular}
+\vfill
+\centering
+
+\end{frame}
+
+% ===== 7 слайд =====
+\begin{frame}{Достижения факультета }
+\centering
+
+\includegraphics[width=0.4\textwidth]{ogy.jpg}
+
+\vspace{0.3cm}
+
+{\small
+\textcolor{darkAccent}{\textbf{Физико-математический факультет ОГУ}}\\
+\vspace{0.05cm}
+• более 90 лет подготовки специалистов \\
+• лидер IT-образования в регионе \\
+• собственная обсерватория и научные школы
+}
+
+\vspace{0.2cm}
+{\tiny Сапрыкина С.В., 22 апреля 2026}
+\end{frame}
+
+\end{document}

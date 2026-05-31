@@ -1,0 +1,151 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{url}
+\usepackage{fancyhdr}
+
+\geometry{letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+\setcounter{page}{17}
+
+\section*{ \S1 КЛАССИФИКАЦИЯ УРАВНЕНИЙ 2-ГО ПОРЯДКА}
+
+Если в правую часть не входит \( u_k \), то это уравнение будет обыкновенным дифференциальным уравнением, зависящим от \( \xi \) как от параметра.
+
+\medskip
+
+3. Для уравнения эллиптического типа $a_{12}^2 - a_{11}a_{22} < 0$ и правые части уравнений (9) и (10) комплексны. Пусть
+\[
+\varphi(x, y) = C
+\]
+--- комплексный интеграл уравнения (9). Тогда
+\[
+\varphi^*(x, y) = C,
+\]
+где \( \varphi^* \) --- сопряженная к \( \varphi \) функция, будет представлять собой общий интеграл сопряженного уравнения (10). Перейдем к комплексным переменным, полагая
+\[
+\xi = \varphi(x, y), \quad \eta = \varphi^*(x, y).
+\]
+
+\medskip
+
+При этом уравнение эллиптического типа приводится к такому же виду, что и гиперболическое.
+
+Чтобы не иметь дела с комплексными переменными, введем новые переменные \( \alpha \) и \( \beta \), равные
+\[
+\alpha = \frac{\varphi + \varphi^*}{2}, \quad \beta = \frac{\varphi - \varphi^*}{2i},
+\]
+так что
+\[
+\xi = \alpha + i\beta, \quad \eta = \alpha - i\beta.
+\]
+
+\medskip
+
+В этом случае
+\[
+a_{11}\xi_x^2 + 2a_{12}\xi_x\xi_y + a_{22}\xi_y^2 = 
+\bigl(a_{11}\alpha_x^2 + 2a_{12}\alpha_x\alpha_y + a_{22}\alpha_y^2\bigr) - 
+\bigl(a_{11}\beta_x^2 + 2a_{12}\beta_x\beta_y + a_{22}\beta_y^2\bigr) +
+\]
+\[
++\; 2i\Bigl(a_{11}\alpha_x\beta_x + a_{12}(\alpha_x\beta_y + \alpha_y\beta_x) + a_{22}\alpha_y\beta_y\Bigr) = 0,
+\]
+т. е.
+\[
+\bar{a}_{11} = \bar{a}_{22}, \quad \bar{a}_{12} = {0}.
+\]
+
+\medskip
+
+Уравнение (4) после деления на коэффициент при \( u_{\alpha\alpha} \) принимает вид
+\[
+u_{\alpha\alpha} + u_{\beta\beta} = \Phi(\alpha, \beta, u, u_\alpha, u_\beta) \quad 
+\bigl(\Phi = -\tfrac{F}{\bar{a}_{22}}\bigr).
+\]
+
+\medskip
+
+Таким образом, в зависимости от знака выражения $a_{12}^2 - a_{11}a_{22}$ имеют место следующие канонические формы
+
+\newpage
+
+КЛАССИФИКАЦИЯ УРАВНЕНИЙ 2-ГО ПОРЯДКА
+
+\setcounter{page}{18}
+
+\noindent уравнения (1):
+\[
+\begin{aligned}
+& a_{12}^2 - a_{11}a_{22} > 0 \quad (\text{гиперболический тип}) \quad 
+u_{xx} - u_{yy} = \Phi \;\; \text{или} \;\; u_{xy} = \Phi,\\[4pt]
+& a_{12}^2 - a_{11}a_{22} < 0 \quad (\text{эллиптический тип}) \quad 
+u_{xx} + u_{yy} = \Phi,\\[4pt]
+& a_{12}^2 - a_{11}a_{22} = 0 \quad (\text{параболический тип}) \quad 
+u_{xx} = \Phi.
+\end{aligned}
+\]
+
+\section*{2. Классификация уравнений 2-го порядка со многими независимыми переменными. Рассмотрим линейное уравнение с действительными коэффициентами}
+\[
+\sum_{j=1}^n \sum_{i=1}^n a_{ij}u_{x_i x_j} + \sum_{i=1}^n b_i u_{x_i} + cu + f = 0 \qquad (a_{ij} = a_{ji}), \tag{12}
+\]
+где \(a, b, c, f\) являются функциями \(x_1, x_2, \ldots, x_n\). Введем новые независимые переменные \(\xi_k\), полагая
+\[
+\xi_k = \xi_k(x_1, x_2, \ldots, x_n) \qquad (k = 1, \ldots, n).
+\]
+
+\medskip
+
+Тогда
+\[
+u_{x_i} = \sum_{k=1}^n u_{\xi_k} \alpha_{ik}, \qquad
+u_{x_i x_j} = \sum_{k=1}^n \sum_{l=1}^n u_{\xi_k \xi_l} \alpha_{ik} \alpha_{jl} + \sum_{k=1}^n u_{\xi_k} (\xi_k)_{x_i x_j},
+\]
+где
+\[
+\alpha_{ik} = \frac{\partial \xi_k}{\partial x_i}.
+\]
+
+\medskip
+
+Подставляя выражения для производных в исходное уравнение, получим:
+\[
+\sum_{k=1}^n \sum_{l=1}^n \tilde{a}_{kl} u_{\xi_k \xi_l} + \sum_{k=1}^n \tilde{b}_k u_{\xi_k} + cu + f = 0,
+\]
+где
+\[
+\tilde{a}_{kl} = \sum_{i=1}^n \sum_{j=1}^n a_{ij} \alpha_{ik} \alpha_{jl}, \qquad
+\tilde{b}_k = \sum_{i=1}^n b_i \alpha_{ik} + \sum_{i=1}^n \sum_{j=1}^n a_{ij} (\xi_k)_{x_i x_j}.
+\]
+
+\medskip
+
+Рассмотрим квадратичную форму
+\[
+\sum_{i=1}^n \sum_{j=1}^n a^0_{ij} y_i y_j, \tag{13}
+\]
+коэффициенты которой равны коэффициентам \(a_{ij}\) исходного уравнения в некоторой точке \((x^0_1, \ldots, x^0_n)\). Производя над переменными \(y\) линейное преобразование
+\[
+y_i = \sum_{k=1}^n \alpha_{ik} \tilde{y}_k,
+\]
+получим для квадратической формы новое выражение:
+\[
+\sum_{k=1}^n \sum_{l=1}^n \tilde{a}^0_{kl} \tilde{y}_k \tilde{y}_l, \quad \text{где} \quad 
+\tilde{a}^0_{kl} = \sum_{i=1}^n \sum_{j=1}^n a^0_{ij} \alpha_{ik} \alpha_{jl}.
+\]
+
+\end{document}
